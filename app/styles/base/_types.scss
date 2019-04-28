@@ -1,0 +1,67 @@
+// Open Sans light 300
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans/OpenSans-Light-webfont.eot');
+  src: url('../fonts/opensans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans/OpenSans-Light-webfont.woff2') format('woff2'),
+       url('../fonts/opensans/OpenSans-Light-webfont.woff') format('woff'),
+       url('../fonts/opensans/OpenSans-Light-webfont.ttf') format('truetype'),
+       url('../fonts/opensans/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+// Open Sans regular 400
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/opensans/OpenSans-Regular-webfont.eot');
+  src: url('../fonts/opensans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans/OpenSans-Regular-webfont.woff2') format('woff2'),
+       url('../fonts/opensans/OpenSans-Regular-webfont.woff') format('woff'),
+       url('../fonts/opensans/OpenSans-Regular-webfont.ttf') format('truetype'),
+       url('../fonts/opensans/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+// Raleway medium 500
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/raleway/Raleway-Medium.eot');
+  src: url('../fonts/raleway/Raleway-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/raleway/Raleway-Medium.woff') format('woff'),
+       url('../fonts/raleway/Raleway-Medium.woff2') format('woff2'),
+       url('../fonts/raleway/Raleway-Medium.ttf') format('truetype'),
+       url('../fonts/raleway/Raleway-Medium.svg#Raleway-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+// Raleway semi-bold 600
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/raleway/Raleway-SemiBold.eot');
+  src: url('../fonts/raleway/Raleway-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/raleway/Raleway-SemiBold.woff') format('woff'),
+       url('../fonts/raleway/Raleway-SemiBold.woff2') format('woff2'),
+       url('../fonts/raleway/Raleway-SemiBold.ttf') format('trutype'),
+       url('../fonts/raleway/Raleway-SemiBold.svg#Raleway-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+// Raleway bold 700
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/raleway/raleRaleway-Bold.eot');
+  src: url('../fonts/raleway/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/raleway/Raleway-Bold.woff') format('woff'),
+       url('../fonts/raleway/Raleway-Bold.woff2') format('woff2'),
+       url('../fonts/raleway/Raleway-Bold.ttf') format('trutype'),
+       url('../fonts/raleway/Raleway-Bold.svg#Raleway-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}

@@ -1,0 +1,46 @@
+.footer {
+  background-color: $color-primary;
+}
+
+.social-links {
+  @include list-reset();
+  display: table;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 2.5rem 0.9375rem;
+  background-color: $color-primary;
+  @media screen and (min-width: 64em) {
+    padding: 4rem 0.9375rem;
+    li {
+      display: inline-block;
+      padding: 0 4rem !important;
+    }
+  }
+  li {
+    &:not(:last-child) {
+      padding-bottom: 1.25rem;
+    }
+  }
+  a {
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    padding: 0.5rem;
+    letter-spacing: $letter-spacing-extra;
+    transition: $transition-global;
+    &:hover {
+      color: $color-primary-light;
+    }
+  }
+
+}
+
+.copyright {
+  display: block;
+  background-color: $color-primary-dark;
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+  color: $color-primary-light;
+  font-size: 0.75rem;
+  font-weight: 300;
+}

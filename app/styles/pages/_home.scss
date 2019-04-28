@@ -1,0 +1,283 @@
+
+.section {
+  margin-bottom: 3.5rem;
+  @media screen and (min-width: 64em) {
+    margin-bottom: 6rem;
+  }
+}
+
+
+/* ==========================================================================
+   Hero Banner
+   ========================================================================== */
+
+.hero-banner {
+  margin-top: -80px; // compensate the header height
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45),rgba(0, 0, 0, 0.45)),
+                    url('http://lorempixel.com/1600/900/business');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+
+  @media screen and (min-width: 64em) {
+    height: 900px; // the height of backgroung image
+  }
+  &__msg {
+    text-align: center;
+    position: relative;
+    max-width: 80%;
+    @media screen and (min-width: 35em) {
+      max-width: 35rem;
+    }
+    small {
+      font-family: $pair-font-stack;
+      text-transform: uppercase;
+      font-size: 0.6875rem;
+      letter-spacing: $letter-spacing-default;
+    }
+    p {
+      font-size: 1rem;
+    }
+    > * {
+      color: $white !important;
+    }
+  }
+}
+
+.scroll-down {
+  position: absolute;
+  padding: 1rem;
+  cursor: pointer;
+  bottom: 1.5rem;
+  @media screen and (min-width: 64em) {
+    bottom: 3.5rem;
+  }
+}
+
+
+/* ==========================================================================
+   Introduction
+   ========================================================================== */
+
+.introduction {
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex: 1 1 512px;
+  }
+  &__asset {
+    max-height: 685px;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      @media screen and (min-width: 64em) {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    background-color: $color-content-bg;
+    @media screen and (min-width: 64em) {
+      padding-left: 5%;
+    }
+  }
+  &__content-copy {
+    margin: 2rem auto;
+    padding: 0 0.9375rem;
+    position: relative;
+    width: 100%;
+    max-width: 35rem;
+    text-align: center; // looks ugly!!!
+    @media screen and (min-width: 64em) {
+      margin: 0;
+      width: 100%;
+      max-width: 490px;
+      text-align: left;
+    }
+  }
+}
+
+
+/* ==========================================================================
+   Portfolio Section
+   ========================================================================== */
+
+.portfolio {
+  .copy {
+    margin-bottom: 2rem;
+    @media screen and (min-width: 64em) {
+      margin-bottom: 3.5rem;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  &__filter-list {
+    @include list-reset();
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    @media screen and (min-width: 64em) {
+      margin-bottom: 5rem;
+    }
+  }
+  &__filter-item {
+    margin: 0 1rem;
+    white-space: nowrap;
+    button {
+      color: $color-primary;
+      padding: 0 0 0.1875rem;
+      letter-spacing: $letter-spacing-default;
+      height: auto;
+      border-bottom: 2px solid transparent;
+      &:hover,
+      &.active  {
+        border-bottom: 2px solid $color-primary;
+      }
+    }
+  }
+  &__grid-list {
+    @include list-reset();
+    font-size: 0;
+    columns: 2 256px;
+    margin-bottom: 3.25rem;
+    @media screen and (min-width: 64em) {
+      columns: 4 256px;
+      margin-bottom: 6.25rem;
+    }
+  }
+  &__grid-item {
+    font-size: inherit;
+    perspective: 1000px;
+    &:hover {
+      .portfolio-grid__tile-flip {
+        transform: rotateY(180deg);
+      }
+      .portfolio-grid__tile-front {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__cta {
+    width: 10rem;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* Refaktorirati
+   --------------------- */
+.portfolio-grid {
+  &__tile-flip {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    height: 100%;
+    position: relative;
+  }
+  &__tile-front {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s;
+    transform: rotateY(0deg);
+  }
+  &__tile-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: solid $color-tile-border;
+    border-width: 1.5rem 1.25rem;
+    background-color: $color-tile-bg;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-size: 1.125rem;
+    p {
+      font-weight: 300;
+      font-size: inherit;
+      position: relative;
+      padding-bottom: 1.25rem;
+      &:after {
+        content: "";
+        background-color: $white;
+        height: 1px;
+        width: 90px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -45px;
+      }
+
+    }
+  }
+  &__tile-title {
+    font-family: $pair-font-stack;
+    font-weight: 600;
+    letter-spacing: $letter-spacing-extra;
+    text-transform: uppercase;
+  }
+}
+
+/* ==========================================================================
+   Services Section
+   ========================================================================== */
+
+.services {
+  .copy {
+    margin-bottom: 3rem;
+    @media screen and (min-width: 64em) {
+      margin-bottom: 7rem;
+    }
+  }
+  &__list {
+    @include list-reset();
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  &__list-item {
+    text-align: center;
+    margin: 0 auto 2rem;
+    width: 80%;
+    max-width: 35rem;
+    @media screen and (min-width: 64em) {
+      width: 31.5%;
+      max-width: 100%;
+      margin-bottom: 5rem;
+    }
+    img {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      margin: 0 auto 2rem;
+    }
+    strong {
+      font-family: $pair-font-stack;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: $letter-spacing-extra;
+      display: block;
+      margin-bottom: 2rem;
+      color: $color-headings;
+    }
+  }
+}

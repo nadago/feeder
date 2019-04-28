@@ -1,0 +1,115 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 9;
+  padding: 1.5rem 0.9375rem;
+  @media screen and (min-width: 64em) {
+    padding: 1.5rem 4rem;
+  }
+}
+
+.logo {
+  position: absolute; // for mobile offcanvas
+  z-index: 9;
+  font-size: 0;
+}
+
+.site-nav {
+  margin-left: auto;
+}
+
+.nav-menu {
+  @include list-reset();
+  visibility: hidden;
+  &:hover {
+    a {
+      opacity: 0.4;
+    }
+  }
+  &__item {
+    padding: 0.5rem 0;
+    text-align: center;
+    @media screen and (min-width: 64em) {
+      display: inline;
+      padding: 0 0.75rem;
+      font-size: 0.6875rem;
+    }
+    a {
+      color: #fff;
+      display: inline-block;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 3.4px;
+      padding: 0.5rem;
+      visibility: visible;
+      transition: opacity 150ms linear 100ms;
+      &:hover {
+        opacity: 1;
+        transition-delay: 0ms;
+      }
+    }
+  }
+}
+
+.form-search {
+  font-size: 0;
+}
+
+.flyout-open,
+.flyout-close {
+  @media screen and (min-width: 64em) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 63.9375em) {
+  .form-search {
+      margin-left: auto;
+  }
+
+  .flyout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    background-color: $color-primary-dark;
+    transition: transform 0.25s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > * {
+      opacity: 0;
+      transition: opacity .26s ease .2s;
+    }
+    &.active {
+      transform: translateX(0);
+      > * {
+        opacity: 1;
+      }
+    }
+  }
+
+  .flyout-open {
+    border: 1px solid $white;
+    color: $white;
+    margin-left: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    height: 2rem;
+  }
+
+  .flyout-close {
+    position: absolute;
+    top: 1.125rem;
+    right: 1.25rem;
+    color: white;
+    line-height: 1;
+    font-family: $base-font-stack;
+    font-size: 2.75rem;
+    font-weight: 300;
+  }
+}
